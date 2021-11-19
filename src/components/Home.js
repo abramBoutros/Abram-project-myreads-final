@@ -4,11 +4,11 @@ import OpenSearch from "./OpenSearch";
 import Head from "./Head";
 import Shelves from "./Shelves";
 
-const Home = ({ books, adjustBookShelf }) => {
+const Home = ({ savedBooks, adjustBookShelf }) => {
 	return (
 		<div className="list-books">
 			<Head />
-			<Shelves books={books} adjustBookShelf={adjustBookShelf} />
+			<Shelves savedBooks={savedBooks} adjustBookShelf={adjustBookShelf} />
 			<OpenSearch />
 		</div>
 	);

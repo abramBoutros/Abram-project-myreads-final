@@ -5,8 +5,12 @@ const SearchBar = (props) => {
 	const [term, setTerm] = useState("");
 
 	const onInput = (e) => {
-		setTerm(e.target.value);
+		avoidLatency(e);
 		props.onNewEntry(term);
+	};
+
+	const avoidLatency = (event) => {
+		setTerm(event.target.value);
 	};
 
 	return (

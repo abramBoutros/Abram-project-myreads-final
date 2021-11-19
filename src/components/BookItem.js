@@ -1,7 +1,7 @@
 import React from "react";
 import SelectShelf from "./SelectShelf";
 
-const BookItem = ({ book, books, foundBooks, adjustBookShelf }) => {
+const BookItem = ({ book, savedBooks, foundBooks, adjustBookShelf }) => {
 	return (
 		<li>
 			<div className="book">
@@ -21,7 +21,7 @@ const BookItem = ({ book, books, foundBooks, adjustBookShelf }) => {
 					/>
 					<SelectShelf
 						book={book}
-						books={books}
+						savedBooks={savedBooks}
 						adjustBookShelf={adjustBookShelf}
 						foundBooks={foundBooks}
 					/>

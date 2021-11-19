@@ -1,21 +1,21 @@
 import React from "react";
 
-const SelectShelf = ({ book, books, foundBooks, adjustBookShelf }) => {
+const SelectShelf = ({ book, savedBooks, foundBooks, adjustBookShelf }) => {
 	// set current shelf to none as default
 	let storedShelf = "none";
 
 	// this component is used for search and home page
 	// so i made this switch to make it useable for both components
-	if (books) {
-		for (let item of books) {
-			if (item.id === book.id) {
+	if (savedBooks) {
+		for (let savedBook of savedBooks) {
+			if (savedBook.id === book.id) {
 				storedShelf = book.shelf;
 				break;
 			}
 		}
 	} else {
-		for (let item of foundBooks) {
-			if (item.id === book.id) {
+		for (let foundBook of foundBooks) {
+			if (foundBook.id === book.id) {
 				storedShelf = book.shelf;
 				break;
 			}
