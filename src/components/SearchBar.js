@@ -5,10 +5,11 @@ const SearchBar = (props) => {
 	const [term, setTerm] = useState("");
 
 	// I tried to set the state by a cb function to avoid latency
-	const onInput = async (e) => {
+	const onInput = (e) => {
 		// I tried to add async/await to solve the one entry latency that's happening
-		await avoidLatency(e);
-		props.onNewEntry(term);
+		avoidLatency(e);
+
+		props.onNewEntry(e.target.value);
 	};
 
 	const avoidLatency = (e) => {
