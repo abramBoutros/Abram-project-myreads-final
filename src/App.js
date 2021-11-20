@@ -21,12 +21,12 @@ const App = () => {
 		}
 	}, []);
 
-	const [books, setBooks] = useState([]);
+	const [savedBooks, setBooks] = useState([]);
 	const adjustBookShelf = (changedBook, shelf) => {
 		BooksAPI.update(changedBook, shelf).then(() => {
 			changedBook.shelf = shelf;
 			setBooks(
-				books
+				savedBooks
 					.filter((book) => book.id !== changedBook.id)
 					.concat(changedBook)
 			);
@@ -48,14 +48,20 @@ const App = () => {
 				<Route
 					path="/search"
 					element={
-						<Search books={books} adjustBookShelf={adjustBookShelf} />
+						<Search
+							savedBooks={savedBooks}
+							adjustBookShelf={adjustBookShelf}
+						/>
 					}
 				/>
 				<Route path="/" element={<Navigate to="/home" />} />
 				<Route
 					path="/home"
 					element={
-						<Home books={books} adjustBookShelf={adjustBookShelf} />
+						<Home
+							savedBooks={savedBooks}
+							adjustBookShelf={adjustBookShelf}
+						/>
 					}
 				/>
 			</Routes>
