@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
--  [description](#description)
+-  [Description](#Description)
 -  [Methods-Used](#Methods-Used)
 -  [TL;DR](#TL;DR)
 -  [What-You're-Getting](#What-You're-Getting)
@@ -11,7 +11,7 @@
 -  [Create-React-App](#Create-React-App)
 -  [Contributing](#Contributing)
 
-## description
+## Description
 
 This is the final assessment project for Udacity's React Fundamentals course. The goal of this project is to learn to build an interactive react web app, This project was to build a books shelf that organize the users books based on catagories 1- Currently Reading 2- Want to read 3- Read, In this project i learned how to make components composition and to pass props from parent to child and how to pass callback function reference as prop to child also.
 
