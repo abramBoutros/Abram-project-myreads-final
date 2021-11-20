@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 const SearchBar = (props) => {
 	const [term, setTerm] = useState("");
 
-	const onInput = (e) => {
-		avoidLatency(e);
+	// I tried to set the state by a cb function to avoid latency
+	const onInput = async (e) => {
+		// I tried to add async/await to solve the one entry latency that's happening
+		await avoidLatency(e);
 		props.onNewEntry(term);
 	};
 
-	const avoidLatency = (event) => {
-		setTerm(event.target.value);
+	const avoidLatency = (e) => {
+		// set the term state to the new value after last entry
+		setTerm(e.target.value);
 	};
 
 	return (

@@ -1,5 +1,6 @@
 import React from "react";
 
+// this component return the header of the home page
 const Head = () => {
 	return (
 		<div className="list-books-title">

@@ -1,19 +1,28 @@
 import React from "react";
 
+// this component is used for search and home routes
+// depending on the passed props, the functionality of this component is determined
+
 const SelectShelf = ({ book, savedBooks, foundBooks, adjustBookShelf }) => {
 	// set current shelf to none as default
 	let storedShelf = "none";
 
 	// this component is used for search and home page
 	// so i made this switch to make it useable for both components
+
+	// if the props is coming from the Home(savedBooks)
 	if (savedBooks) {
+		// loop over the saved books on the home page and select each book's shelf (defaultValue)
 		for (let savedBook of savedBooks) {
 			if (savedBook.id === book.id) {
 				storedShelf = book.shelf;
 				break;
 			}
 		}
-	} else {
+	}
+	// or if the props are coming from the search page(foundBooks)
+	else {
+		// loop over the saved books on the search page and select each book's shelf (defaultValue)
 		for (let foundBook of foundBooks) {
 			if (foundBook.id === book.id) {
 				storedShelf = book.shelf;

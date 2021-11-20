@@ -1,6 +1,9 @@
 import React from "react";
 import SelectShelf from "./SelectShelf";
 
+// this component is responsible to generate a book for either search or home page
+// depending on the passed props
+
 const BookItem = ({ book, savedBooks, foundBooks, adjustBookShelf }) => {
 	return (
 		<li>

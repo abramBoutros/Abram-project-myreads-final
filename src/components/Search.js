@@ -5,17 +5,10 @@ import SearchBar from "./SearchBar";
 import FoundBooks from "./FoundBooks";
 
 const Search = ({ savedBooks, adjustBookShelf }) => {
-	const [query, setQuery] = useState("");
 	const [foundBooks, setFoundBooks] = useState([]);
 	const [searchEmpty, setSearchEmpty] = useState(false);
 
 	const onNewEntry = async (term) => {
-		const res = await BooksAPI.search(term);
-
-		// I know the search is always one letter late but i can't find that issue
-		// It could be from the api itself
-		setQuery(res);
-
 		// if term exist run the search
 		if (term) {
 			// use the api search and trim the term from white spaces
@@ -55,7 +48,6 @@ const Search = ({ savedBooks, adjustBookShelf }) => {
 							savedBooks={savedBooks}
 							foundBooks={foundBooks}
 							adjustBookShelf={adjustBookShelf}
-							query={query}
 						/>
 					</ol>
 				)}

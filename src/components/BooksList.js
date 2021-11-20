@@ -1,5 +1,7 @@
 import React from "react";
 
+// this component is to generate a list of books for the home page
+
 import BookItem from "./BookItem";
 const BooksList = ({ savedBooks, adjustBookShelf }) => {
 	return (
