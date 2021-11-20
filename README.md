@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
--  [Overview](#Overview)
+-  [description](#description)
 -  [Methods-Used](#Methods-Used)
 -  [TL;DR](#TL;DR)
 -  [What-You're-Getting](#What-You're-Getting)
@@ -11,11 +11,12 @@
 -  [Create-React-App](#Create-React-App)
 -  [Contributing](#Contributing)
 
-## Overview
+## description
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This is the final assessment project for Udacity's React Fundamentals course. The goal of this project is to learn to build an interactive react web app, This project was to build a books shelf that organize the users books based on catagories 1- Currently Reading 2- Want to read 3- Read, In this project i learned how to make components composition and to pass props from parent to child and how to pass callback function reference as prop to child also.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+steps to install the project => (npm install to install the dependencies of the project).
+steps to start the project => (npm start to launch the project).
 
 ## Methods-Used
 
