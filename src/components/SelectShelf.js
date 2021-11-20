@@ -43,7 +43,7 @@ const SelectShelf = ({ book, savedBooks, foundBooks, adjustBookShelf }) => {
 				<option value="currentlyReading">Currently Reading</option>
 				<option value="wantToRead">Want to Read</option>
 				<option value="read">Read</option>
-				<option value="none">None</option>
+				<option value="none">None-Remove</option>
 			</select>
 		</div>
 	);
